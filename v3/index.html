@@ -5,117 +5,122 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AMIMER ENERGIE</title>
 <meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="../img/logo-gold.webp">
+<link rel="icon" href="../img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0e14;--bg2:#10141d;--card:#141926;--gold:#c9a96a;--gold2:#e7cf9b;--txt:#e9ecf2;--mut:#99a1b2;--line:rgba(201,169,106,.18)}
+:root{--bg:#fbf9f4;--bg2:#f3efe6;--card:#ffffff;--navy:#102844;--navy2:#1d3a5f;--gold:#b2894a;--gold2:#caa461;--txt:#1b2430;--mut:#687486;--soft:#9aa3b0;--line:#e7e1d4}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Jost,system-ui,sans-serif;color:var(--txt);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden;font-weight:300}
 img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;letter-spacing:.005em}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08;letter-spacing:.004em;color:var(--navy)}
 .wrap{width:min(1220px,91vw);margin:0 auto}
 .rv{opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
 .gold{color:var(--gold)}
-.gline{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:400}
+.gline{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:400}
 .gline:before,.gline.c:after{content:"";width:38px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
 .gline.c:after{background:linear-gradient(90deg,var(--gold),transparent)}
 header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.5s;padding:8px 0}
-header.sc{background:rgba(9,12,18,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+header.sc{background:rgba(251,249,244,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:82px}
 .brand{display:flex;align-items:center;gap:13px}
-.brand img{height:42px}
-.brand b{font-family:'Cormorant Garamond';font-size:22px;font-weight:600;letter-spacing:.06em}
+.brand img{height:44px}
+.brand b{font-family:'Cormorant Garamond';font-size:22px;font-weight:600;letter-spacing:.06em;color:var(--navy)}
 .brand small{display:block;font-size:9.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-top:1px}
-.menu{display:flex;gap:40px;font-size:13.5px;letter-spacing:.05em;color:#c3c9d6}
-.menu a{position:relative;padding:5px 0;transition:.3s}.menu a:hover{color:var(--gold2)}
+.menu{display:flex;gap:40px;font-size:13.5px;letter-spacing:.05em;color:var(--navy2)}
+.menu a{position:relative;padding:5px 0;transition:.3s}.menu a:hover{color:var(--gold)}
 .menu a:after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--gold);transition:.35s}.menu a:hover:after{width:100%}
 .gbtn{border:1px solid var(--gold);color:var(--gold);background:none;padding:12px 26px;font-size:13px;letter-spacing:.08em;cursor:pointer;font-family:inherit;transition:.4s;position:relative;overflow:hidden}
 .gbtn span{position:relative;z-index:2;transition:.4s}
 .gbtn:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--gold),var(--gold2));transform:translateY(101%);transition:.4s}
-.gbtn:hover:before{transform:none}.gbtn:hover span{color:#0b0e14}
-.burger{display:none;border:0;background:none;width:42px;height:42px;cursor:pointer}.burger i{display:block;width:24px;height:1px;background:var(--gold);margin:6px auto;transition:.3s}
+.gbtn:hover:before{transform:none}.gbtn:hover span{color:#fff}
+.gbtn.solid{background:linear-gradient(120deg,var(--navy),var(--navy2));border-color:var(--navy);color:#fff}
+.gbtn.solid span{color:#fff}.gbtn.solid:before{background:linear-gradient(120deg,var(--gold),var(--gold2))}.gbtn.solid:hover span{color:#fff}
+.burger{display:none;border:0;background:none;width:42px;height:42px;cursor:pointer}.burger i{display:block;width:24px;height:1.5px;background:var(--navy);margin:6px auto;transition:.3s}
 @media(max-width:980px){.menu,nav .gbtn{display:none}.burger{display:block}}
 .mob{position:fixed;inset:0;background:var(--bg2);z-index:60;visibility:hidden;transform:translateX(100%);transition:.5s;display:flex;flex-direction:column;justify-content:center;padding:50px;gap:6px}
-.mob.open{transform:none;visibility:visible}.mob a{font-family:'Cormorant Garamond';font-size:32px;padding:10px 0;color:var(--txt)}.mob a:hover{color:var(--gold)}
+.mob.open{transform:none;visibility:visible}.mob a{font-family:'Cormorant Garamond';font-size:32px;padding:10px 0;color:var(--navy)}.mob a:hover{color:var(--gold)}
 .mclose{position:absolute;top:34px;right:34px;border:0;background:none;color:var(--gold);font-size:32px;cursor:pointer}
-/* hero */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero .bg{position:absolute;inset:0}.hero .bg img{width:100%;height:100%;object-fit:cover}
-.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 70% 30%,rgba(11,14,20,.5),rgba(11,14,20,.93) 72%),linear-gradient(180deg,rgba(11,14,20,.7),rgba(11,14,20,.55))}
-.hvig{position:absolute;inset:0;z-index:2;box-shadow:inset 0 0 220px 60px rgba(0,0,0,.6)}
-.hero .wrap{position:relative;z-index:3;padding:120px 0 80px}
-.hero h1{font-size:clamp(50px,8.5vw,120px);font-weight:600;letter-spacing:-.01em;line-height:.98}
-.hero h1 em{font-style:italic;color:var(--gold2)}
-.hero .sub{font-size:19px;color:#c3c9d6;max-width:50ch;line-height:1.8;margin:34px 0 44px;font-weight:300}
+/* hero : clair, deux colonnes */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;background:linear-gradient(120deg,var(--bg) 0%,var(--bg) 46%,var(--bg2) 100%)}
+.hero .grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;width:100%}
+.hero h1{font-size:clamp(46px,6.4vw,92px);font-weight:600;letter-spacing:-.01em;line-height:1}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .sub{font-size:18px;color:var(--mut);max-width:48ch;line-height:1.8;margin:30px 0 40px;font-weight:300}
 .hrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.hplay{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.1em;color:var(--txt);cursor:pointer}
+.hplay{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.1em;color:var(--navy);cursor:pointer}
 .hplay .c{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .hplay svg{width:14px;height:14px;fill:var(--gold)}
-.scrolldot{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;font-size:11px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
-.scrolldot:after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:sd 2s ease-in-out infinite}
-@keyframes sd{0%,100%{opacity:.3}50%{opacity:1}}
-section{padding:140px 0;position:relative}
-.shead{max-width:640px;margin-bottom:64px}.shead.c{margin:0 auto 64px;text-align:center}
-.shead h2{font-size:clamp(36px,5vw,64px);font-weight:600;margin-top:22px}
+.hero .im{position:relative}
+.hero .im .fr{position:absolute;inset:-14px -14px -14px 20px;border:1px solid var(--gold);z-index:1;pointer-events:none}
+.hero .im img{width:100%;height:580px;object-fit:cover;position:relative;z-index:2;box-shadow:0 40px 90px rgba(16,40,68,.16)}
+.hero .tagim{position:absolute;z-index:3;left:-26px;bottom:34px;background:#fff;padding:16px 22px;box-shadow:0 20px 50px rgba(16,40,68,.16);border-bottom:2px solid var(--gold)}
+.hero .tagim b{font-family:'Cormorant Garamond';font-size:30px;color:var(--navy);display:block;line-height:1}
+.hero .tagim span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.hstat{display:flex;gap:46px;margin-top:50px}
+.hstat div b{font-family:'Cormorant Garamond';font-size:40px;color:var(--navy);display:block;line-height:1}
+.hstat div span{font-size:12px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
+section{padding:130px 0;position:relative}
+.shead{max-width:640px;margin-bottom:60px}.shead.c{margin:0 auto 60px;text-align:center}
+.shead h2{font-size:clamp(36px,5vw,62px);font-weight:600;margin-top:20px}
 .shead h2 em{font-style:italic;color:var(--gold)}
-.shead p{color:var(--mut);font-size:17px;line-height:1.85;margin-top:20px;font-weight:300}
+.shead p{color:var(--mut);font-size:17px;line-height:1.85;margin-top:18px;font-weight:300}
 /* about */
 .about{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
 .about .im{position:relative}
 .about .im .fr{position:absolute;inset:-14px;border:1px solid var(--gold);z-index:1;pointer-events:none}
-.about .im img{width:100%;height:560px;object-fit:cover;position:relative;z-index:2;filter:brightness(.92) contrast(1.02)}
+.about .im img{width:100%;height:560px;object-fit:cover;position:relative;z-index:2;box-shadow:0 30px 70px rgba(16,40,68,.14)}
 .about p{color:var(--mut);font-size:16.5px;line-height:1.9;margin-top:20px;font-weight:300}
-.about .lead{color:var(--txt);font-size:21px;font-family:'Cormorant Garamond';font-style:italic;line-height:1.5;font-weight:500}
+.about .lead{color:var(--navy);font-size:21px;font-family:'Cormorant Garamond';font-style:italic;line-height:1.5;font-weight:500}
 .sig{margin-top:34px;display:flex;gap:40px}
 .sig div b{font-family:'Cormorant Garamond';font-size:42px;color:var(--gold);display:block;line-height:1}
 .sig div span{font-size:12.5px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
 /* products */
 .prod{background:var(--bg2)}
 .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.pc{position:relative;background:linear-gradient(180deg,var(--card),#0f131c);border:1px solid var(--line);overflow:hidden;transition:.5s}
-.pc:hover{border-color:var(--gold);transform:translateY(-8px)}
-.pc .ph{height:240px;display:flex;align-items:center;justify-content:center;padding:34px;background:radial-gradient(120% 110% at 50% 25%,rgba(201,169,106,.08),transparent 60%)}
-.pc .ph img{max-height:100%;width:auto;object-fit:contain;transition:.6s;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5))}
+.pc{position:relative;background:var(--card);border:1px solid var(--line);overflow:hidden;transition:.5s}
+.pc:hover{border-color:var(--gold);transform:translateY(-8px);box-shadow:0 30px 60px rgba(16,40,68,.12)}
+.pc .ph{height:240px;display:flex;align-items:center;justify-content:center;padding:34px;background:radial-gradient(120% 110% at 50% 20%,#fff 55%,#f4efe4)}
+.pc .ph img{max-height:100%;width:auto;object-fit:contain;transition:.6s;filter:drop-shadow(0 18px 30px rgba(16,40,68,.14))}
 .pc:hover .ph img{transform:scale(1.07)}
-.pc .pb{padding:0 30px 32px}
+.pc .pb{padding:26px 30px 32px;border-top:1px solid var(--line)}
 .pc .tg{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .pc h3{font-size:27px;font-weight:600;margin-bottom:12px}
 .pc p{font-size:14px;color:var(--mut);line-height:1.7;font-weight:300;margin-bottom:20px}
-.pc .ln{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.08em;color:var(--gold);text-transform:uppercase}
-.pc .ln svg{width:15px;height:15px;transition:.3s}.pc:hover .ln svg{transform:translateX(5px)}
-/* solutions parallax */
-.sol{position:relative;overflow:hidden}
-.sol .bg{position:absolute;inset:0}.sol .bg img{width:100%;height:100%;object-fit:cover;opacity:.16}
-.sol:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(11,14,20,.8),var(--bg))}
+.pc .ln{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.08em;color:var(--navy);text-transform:uppercase;font-weight:400}
+.pc .ln svg{width:15px;height:15px;transition:.3s;stroke:var(--gold)}.pc:hover .ln svg{transform:translateX(5px)}
+/* solutions parallax (clair) */
+.sol{position:relative;overflow:hidden;background:var(--bg)}
+.sol .bg{position:absolute;inset:0}.sol .bg img{width:100%;height:100%;object-fit:cover;opacity:.1}
+.sol:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),rgba(251,249,244,.86),var(--bg))}
 .sol .wrap{position:relative;z-index:2}
 .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.sgx{background:var(--bg);padding:40px 30px;transition:.5s}
-.sgx:hover{background:var(--card)}
-.sgx .n{font-family:'Cormorant Garamond';font-size:46px;color:var(--gold);font-style:italic;line-height:1;margin-bottom:22px;opacity:.9}
+.sgx{background:var(--card);padding:40px 30px;transition:.5s}
+.sgx:hover{background:#fff;box-shadow:0 20px 40px rgba(16,40,68,.08)}
+.sgx .n{font-family:'Cormorant Garamond';font-size:46px;color:var(--gold);font-style:italic;line-height:1;margin-bottom:22px;opacity:.95}
 .sgx h3{font-size:23px;font-weight:600;margin-bottom:12px}
 .sgx p{font-size:13.5px;color:var(--mut);line-height:1.7;font-weight:300}
-/* numbers */
-.stat{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* numbers : bande navy (un seul élément foncé, élégant) */
+.stat{background:linear-gradient(120deg,var(--navy),var(--navy2))}
 .strow{display:grid;grid-template-columns:repeat(4,1fr)}
-.stc{padding:64px 24px;text-align:center;border-right:1px solid var(--line)}.stc:last-child{border-right:0}
-.stc b{font-family:'Cormorant Garamond';font-size:clamp(44px,5.5vw,72px);font-weight:600;color:var(--gold);display:block;line-height:1}
-.stc span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:14px;display:block}
+.stc{padding:64px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.stc:last-child{border-right:0}
+.stc b{font-family:'Cormorant Garamond';font-size:clamp(44px,5.5vw,72px);font-weight:600;color:var(--gold2);display:block;line-height:1}
+.stc span{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#aeb9c9;margin-top:14px;display:block}
 /* services */
 .srv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.svx{background:var(--bg);padding:44px 34px;transition:.5s}.svx:hover{background:var(--card)}
-.svx .ic{width:50px;height:50px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
-.svx .ic svg{width:22px;height:22px;stroke:var(--gold)}
+.svx{background:var(--card);padding:44px 34px;transition:.5s}.svx:hover{background:#fff;box-shadow:0 18px 40px rgba(16,40,68,.08)}
+.svx .ic{width:54px;height:54px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.svx .ic svg{width:23px;height:23px;stroke:var(--gold)}
 .svx h3{font-size:24px;font-weight:600;margin-bottom:12px}
 .svx p{font-size:14px;color:var(--mut);line-height:1.7;font-weight:300}
 /* gallery */
 .gal{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;grid-auto-rows:220px}
 .gi{overflow:hidden;position:relative;border:1px solid var(--line)}
-.gi img{width:100%;height:100%;object-fit:cover;transition:.8s;filter:brightness(.82)}.gi:hover img{transform:scale(1.07);filter:brightness(1)}
-.gi b{position:absolute;left:20px;bottom:16px;z-index:2;font-family:'Cormorant Garamond';font-size:20px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.8)}
-.gi:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,12,18,.7),transparent 55%)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:.8s}.gi:hover img{transform:scale(1.07)}
+.gi b{position:absolute;left:20px;bottom:16px;z-index:2;font-family:'Cormorant Garamond';font-size:20px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.gi:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,40,68,.6),transparent 55%)}
 .a1{grid-column:span 7;grid-row:span 2}.a2{grid-column:span 5}.a3{grid-column:span 5}.a4{grid-column:span 4}.a5{grid-column:span 4}.a6{grid-column:span 4}
 /* contact */
 .ct{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:start}
@@ -124,51 +129,55 @@ section{padding:140px 0;position:relative}
 .cl{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
 .cl .ic{flex:none;width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .cl .ic svg{width:20px;height:20px;stroke:var(--gold)}
-.cl b{font-family:'Cormorant Garamond';font-size:19px;display:block;margin-bottom:4px}
+.cl b{font-family:'Cormorant Garamond';font-size:19px;display:block;margin-bottom:4px;color:var(--navy)}
 .cl span{font-size:14px;color:var(--mut);font-weight:300;line-height:1.5}
-.form{background:linear-gradient(180deg,var(--card),#0f131c);border:1px solid var(--line);padding:42px 38px}
+.form{background:var(--card);border:1px solid var(--line);padding:42px 38px;box-shadow:0 24px 60px rgba(16,40,68,.08)}
 .form h3{font-size:28px;margin-bottom:8px}.form>p{color:var(--mut);font-size:14px;margin-bottom:26px;font-weight:300}
 .fld{margin-bottom:22px}.fg{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .fld label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:9px}
-.fld input,.fld select,.fld textarea{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--txt);padding:13px 15px;font:inherit;font-size:15px;transition:.3s}
-.fld input::placeholder,.fld textarea::placeholder{color:#5b6476}
-.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--gold);background:rgba(201,169,106,.04)}
-.fld select option{background:var(--bg2)}
+.fld input,.fld select,.fld textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--txt);padding:13px 15px;font:inherit;font-size:15px;transition:.3s}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--soft)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--gold);background:#fff}
+.fld select option{background:#fff}
 .full{grid-column:span 2}
 .form .gbtn{width:100%;margin-top:8px;padding:16px}
-footer{background:var(--bg2);border-top:1px solid var(--line);padding:76px 0 30px}
-.fg2{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:48px;border-bottom:1px solid var(--line)}
-.fb img{height:46px;margin-bottom:20px}.fb p{color:var(--mut);font-size:14px;line-height:1.8;max-width:34ch;font-weight:300}
-.fc h4{font-family:'Cormorant Garamond';font-size:19px;color:var(--gold);margin-bottom:18px}
-.fc a{display:block;padding:7px 0;font-size:14px;color:#b4bccb;font-weight:300;transition:.3s}.fc a:hover{color:var(--gold)}
-.fbot{display:flex;justify-content:space-between;padding-top:26px;font-size:13px;color:var(--mut);flex-wrap:wrap;gap:10px}.fbot b{color:var(--gold)}
-@media(max-width:980px){.about,.ct{grid-template-columns:1fr;gap:48px}.pg,.srv{grid-template-columns:1fr 1fr}.sg,.strow{grid-template-columns:1fr 1fr}.about .im img{height:440px}}
-@media(max-width:620px){section{padding:88px 0}.pg,.srv,.sg,.strow,.fg,.fg2{grid-template-columns:1fr}.full{grid-column:span 1}.stc{border-right:0;border-bottom:1px solid var(--line)}.gal{grid-template-columns:1fr 1fr}.a1,.a2,.a3,.a4,.a5,.a6{grid-column:span 1;grid-row:span 1}}
+footer{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#aeb9c9;padding:76px 0 30px}
+.fg2{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+.fb img{height:46px;margin-bottom:20px}.fb p{color:#9fabbd;font-size:14px;line-height:1.8;max-width:34ch;font-weight:300}
+.fc h4{font-family:'Cormorant Garamond';font-size:19px;color:var(--gold2);margin-bottom:18px}
+.fc a{display:block;padding:7px 0;font-size:14px;color:#aeb9c9;font-weight:300;transition:.3s}.fc a:hover{color:var(--gold2)}
+.fbot{display:flex;justify-content:space-between;padding-top:26px;font-size:13px;color:#8595aa;flex-wrap:wrap;gap:10px}.fbot b{color:var(--gold2)}
+@media(max-width:980px){.about,.ct,.hero .grid{grid-template-columns:1fr;gap:48px}.pg,.srv{grid-template-columns:1fr 1fr}.sg,.strow{grid-template-columns:1fr 1fr}.about .im img,.hero .im img{height:440px}}
+@media(max-width:620px){section{padding:88px 0}.hero{padding:110px 0 60px}.pg,.srv,.sg,.strow,.fg,.fg2{grid-template-columns:1fr}.full{grid-column:span 1}.stc{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}.gal{grid-template-columns:1fr 1fr}.a1,.a2,.a3,.a4,.a5,.a6{grid-column:span 1;grid-row:span 1}.hstat{gap:30px}}
 </style>
 </head>
 <body>
 <header id="hd"><div class="wrap"><nav>
-<a class="brand" href="#top"><img src="../img/logo-gold.webp" alt=""><div><b>AMIMER</b><small>Energie</small></div></a>
+<a class="brand" href="#top"><img src="../img/logo.webp" alt=""><div><b>AMIMER</b><small>Energie</small></div></a>
 <div class="menu"><a href="#about">Maison</a><a href="#produits">Collection</a><a href="#solutions">Solutions</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
-<button class="gbtn" data-interest><span>Demander un devis</span></button>
+<button class="gbtn solid" data-interest><span>Demander un devis</span></button>
 <button class="burger" id="bg"><i></i><i></i><i></i></button>
 </nav></div></header>
 <nav class="mob" id="mob"><button class="mclose" id="mc">×</button><a href="#about">Maison</a><a href="#produits">Collection</a><a href="#solutions">Solutions</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
 
 <main id="top">
-<section class="hero">
-<div class="bg"><img src="../img/ge-tente.webp" alt=""></div><div class="hvig"></div>
-<div class="wrap">
+<section class="hero"><div class="wrap"><div class="grid">
+<div>
 <div class="gline rv">Énergie d'exception · depuis 1989</div>
-<h1 class="rv d1" style="margin-top:28px">La puissance,<br>avec <em>élégance</em>.</h1>
+<h1 class="rv d1" style="margin-top:26px">La puissance,<br>avec <em>élégance</em>.</h1>
 <p class="sub rv d2">Groupes électrogènes, centrales clés en main, compresseurs et solaire. L'excellence industrielle algérienne, au service de vos plus grandes ambitions.</p>
-<div class="hrow rv d3"><button class="gbtn" data-interest><span>Découvrir la collection</span></button><a class="hplay" href="#about"><span class="c"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>Notre histoire</a></div>
+<div class="hrow rv d3"><button class="gbtn solid" data-interest><span>Découvrir la collection</span></button><a class="hplay" href="#about"><span class="c"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>Notre histoire</a></div>
+<div class="hstat rv d4">
+<div><b>35</b><span>Années</span></div>
+<div><b>09</b><span>Implantations</span></div>
+<div><b>ISO</b><span>9001:2015</span></div>
 </div>
-<div class="scrolldot">Défiler</div>
-</section>
+</div>
+<div class="im rv d2"><div class="fr"></div><img src="../img/ge-rouge-studio.webp" alt="Groupe électrogène Amimer"><div class="tagim"><b>Hoggar</b><span>Diesel · Gaz · Hybride</span></div></div>
+</div></div></section>
 
 <section id="about"><div class="wrap about">
-<div class="im rv"><div class="fr"></div><img src="../img/ge-rouge-studio.webp" alt="Groupe électrogène Amimer"></div>
+<div class="im rv"><div class="fr"></div><img src="../img/showroom.webp" alt="Showroom Amimer Energie"></div>
 <div>
 <div class="gline rv">Maison Amimer</div>
 <h2 class="rv d1" style="font-size:clamp(36px,4.8vw,60px);margin:22px 0 26px">Depuis 1989,<br>l'énergie en <em>héritage</em>.</h2>
@@ -186,12 +195,12 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:76px 0 30p
 <section id="produits" class="prod"><div class="wrap">
 <div class="shead c rv"><div class="gline c">La collection</div><h2>Une gamme <em>d'exception</em>.</h2><p>Chaque produit, pensé pour la performance et la durée — de l'usage industriel le plus intensif aux besoins domestiques.</p></div>
 <div class="pg">
-<article class="pc rv"><div class="ph"><img src="../img/p/ge-tassili.jpg" alt="Tassili"></div><div class="pb"><div class="tg">Groupes électrogènes</div><h3>Tassili</h3><p>Diesel de forte puissance, jusqu'à 800 kVA, tractable et silencieux pour les sites d'exception.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-<article class="pc rv d1"><div class="ph"><img src="../img/p/ge-rouge.jpg" alt="Hoggar"></div><div class="pb"><div class="tg">Groupes électrogènes</div><h3>Hoggar</h3><p>Diesel, gaz ou hybride — standard, silencieux, skid ou mobile. Une signature pour chaque usage.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-<article class="pc rv d2"><div class="ph"><img src="../img/p/comp-vis.jpg" alt="Compresseurs"></div><div class="pb"><div class="tg">Air comprimé</div><h3>Compresseurs</h3><p>À vis et mobiles, toutes pressions, pour un air comprimé fiable en usage industriel intensif.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-<article class="pc rv"><div class="ph"><img src="../img/p/kit-solaire.jpg" alt="Solaire"></div><div class="pb"><div class="tg">Renouvelable</div><h3>Kits solaires</h3><p>De 5 à 11 kWc et sur-mesure — une solution écologique et raffinée pour votre énergie.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-<article class="pc rv d1"><div class="ph"><img src="../img/p/conteneur-40.jpg" alt="Conteneurs"></div><div class="pb"><div class="tg">Conteneurs</div><h3>Shelters techniques</h3><p>Conteneurs 20 et 40 pieds, bases de vie et postes électriques entièrement personnalisables.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-<article class="pc rv d2"><div class="ph"><img src="../img/p/comp-premium.jpg" alt="Traitement d'air"></div><div class="pb"><div class="tg">Air comprimé</div><h3>Traitement d'air</h3><p>Sécheurs, filtres et compresseurs premium pour un air propre, en continu, sans compromis.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv"><div class="ph"><img src="../img/p/ge-tassili.jpg" alt="Tassili"></div><div class="pb"><div class="tg">Groupes électrogènes</div><h3>Tassili</h3><p>Diesel de forte puissance, jusqu'à 800 kVA, tractable et silencieux pour les sites d'exception.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv d1"><div class="ph"><img src="../img/p/ge-rouge.jpg" alt="Hoggar"></div><div class="pb"><div class="tg">Groupes électrogènes</div><h3>Hoggar</h3><p>Diesel, gaz ou hybride — standard, silencieux, skid ou mobile. Une signature pour chaque usage.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv d2"><div class="ph"><img src="../img/p/comp-vis.jpg" alt="Compresseurs"></div><div class="pb"><div class="tg">Air comprimé</div><h3>Compresseurs</h3><p>À vis et mobiles, toutes pressions, pour un air comprimé fiable en usage industriel intensif.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv"><div class="ph"><img src="../img/p/kit-solaire.jpg" alt="Solaire"></div><div class="pb"><div class="tg">Renouvelable</div><h3>Kits solaires</h3><p>De 5 à 11 kWc et sur-mesure — une solution écologique et raffinée pour votre énergie.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv d1"><div class="ph"><img src="../img/p/conteneur-40.jpg" alt="Conteneurs"></div><div class="pb"><div class="tg">Conteneurs</div><h3>Shelters techniques</h3><p>Conteneurs 20 et 40 pieds, bases de vie et postes électriques entièrement personnalisables.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
+<article class="pc rv d2"><div class="ph"><img src="../img/p/comp-premium.jpg" alt="Traitement d'air"></div><div class="pb"><div class="tg">Air comprimé</div><h3>Traitement d'air</h3><p>Sécheurs, filtres et compresseurs premium pour un air propre, en continu, sans compromis.</p><a class="ln" data-interest>Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
 </div>
 </div></section>
 
@@ -228,10 +237,10 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:76px 0 30p
 <div class="shead rv"><div class="gline">Galerie</div><h2>L'excellence, <em>en images</em>.</h2></div>
 <div class="gal">
 <div class="gi a1 rv"><img src="../img/sipsa.webp" alt=""><b>Salon SIPSA — Alger</b></div>
-<div class="gi a2 rv d1"><img src="../img/showroom.webp" alt=""><b>Showroom</b></div>
-<div class="gi a3 rv"><img src="../img/ge-rouge-salon.webp" alt=""><b>Gamme Hoggar</b></div>
+<div class="gi a2 rv d1"><img src="../img/ge-rouge-salon.webp" alt=""><b>Gamme Hoggar</b></div>
+<div class="gi a3 rv"><img src="../img/conteneurs-sureleves.webp" alt=""><b>Conteneurs techniques</b></div>
 <div class="gi a4 rv d1"><img src="../img/signature-mali.webp" alt=""><b>Centrales — Mali</b></div>
-<div class="gi a5 rv d2"><img src="../img/conteneurs-sureleves.webp" alt=""><b>Conteneurs techniques</b></div>
+<div class="gi a5 rv d2"><img src="../img/champ-solaire.webp" alt=""><b>Centrale solaire</b></div>
 <div class="gi a6 rv d3"><img src="../img/visite-officielle.webp" alt=""><b>Visite officielle</b></div>
 </div>
 </div></section>
@@ -254,14 +263,14 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:76px 0 30p
 <div class="fld full"><label>Catégorie</label><select><option>Groupes électrogènes</option><option>Compresseurs d'air</option><option>Kits solaires</option><option>Conteneurs</option><option>Centrale / EPC</option><option>Maintenance / Location</option></select></div>
 <div class="fld full"><label>Votre besoin</label><textarea rows="3" placeholder="Décrivez votre projet…"></textarea></div>
 </div>
-<button class="gbtn" type="submit"><span>Envoyer ma demande</span></button>
+<button class="gbtn solid" type="submit"><span>Envoyer ma demande</span></button>
 </form>
 </div></section>
 </main>
 
 <footer><div class="wrap">
 <div class="fg2">
-<div class="fb"><img src="../img/logo-gold.webp" alt=""><p>Votre source d'énergie depuis 1989. L'excellence industrielle algérienne, au service de vos ambitions.</p></div>
+<div class="fb"><img src="../img/logo-white.webp" alt=""><p>Votre source d'énergie depuis 1989. L'excellence industrielle algérienne, au service de vos ambitions.</p></div>
 <div class="fc"><h4>Collection</h4><a data-interest>Groupes électrogènes</a><a data-interest>Compresseurs</a><a data-interest>Kits solaires</a><a data-interest>Conteneurs</a></div>
 <div class="fc"><h4>Maison</h4><a href="#about">À propos</a><a href="#solutions">Solutions</a><a href="#services">Services</a></div>
 <div class="fc"><h4>Contact</h4><a>Kouba, Alger</a><a>Seddouk, Béjaïa</a><a>+213 28 97 77 79</a><a>contact@amimer.com</a></div>
