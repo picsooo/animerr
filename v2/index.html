@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fr" data-v="2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AMIMER ENERGIE</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14171c;--mut:#7c8591;--soft:#aab2bd;--line:#ececec;--bg:#fafafa;--accent:#16407e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-weight:400}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,serif;font-weight:400;letter-spacing:-.01em;line-height:1.1}
+.wrap{width:min(1180px,90vw);margin:0 auto}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s}
+header.sc{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+.brand{display:flex;align-items:center;gap:11px;font-family:Fraunces;font-size:18px;letter-spacing:.02em}
+.brand img{height:40px;opacity:.95}
+.menu{display:flex;gap:38px;font-size:14px;color:#50585f;font-weight:400}
+.menu a{transition:.25s}.menu a:hover{color:var(--ink)}
+.nbtn{font-size:14px;border:1px solid var(--ink);border-radius:40px;padding:11px 22px;transition:.3s;cursor:pointer;background:none;font-family:inherit;color:var(--ink)}
+.nbtn:hover{background:var(--ink);color:#fff}
+.burger{display:none;border:0;background:none;width:40px;height:40px;cursor:pointer}.burger i{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px auto}
+@media(max-width:940px){.menu,nav .nbtn{display:none}.burger{display:block}}
+.mob{position:fixed;inset:0;background:#fff;z-index:60;visibility:hidden;transform:translateY(-100%);transition:.5s cubic-bezier(.3,.8,.2,1);display:flex;flex-direction:column;justify-content:center;padding:40px;gap:8px}
+.mob.open{transform:none;visibility:visible}.mob a{font-family:Fraunces;font-size:30px;padding:12px 0;color:var(--ink)}
+.mclose{position:absolute;top:30px;right:30px;border:0;background:none;font-size:30px;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;width:100%}
+.mark{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--soft);margin-bottom:34px}
+.hero h1{font-size:clamp(44px,7vw,92px);font-weight:400;letter-spacing:-.03em}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .sub{font-size:18px;color:var(--mut);line-height:1.75;max-width:44ch;margin:34px 0 40px;font-weight:300}
+.hrow{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.lnk{font-size:15px;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:.3s}.lnk:hover{color:var(--accent);border-color:var(--accent)}
+.hbtn{background:var(--ink);color:#fff;border:0;border-radius:40px;padding:15px 30px;font-size:15px;cursor:pointer;font-family:inherit;transition:.3s}.hbtn:hover{background:var(--accent)}
+.hero .im{position:relative}
+.hero .im img{width:100%;height:560px;object-fit:cover;border-radius:4px;filter:grayscale(.12)}
+.hero .im .cap{position:absolute;bottom:26px;left:26px;background:#fff;padding:14px 20px;border-radius:2px;font-size:13px;color:var(--mut);box-shadow:0 14px 40px rgba(0,0,0,.1)}
+.hero .im .cap b{color:var(--ink);font-family:Fraunces;font-size:16px;display:block;margin-bottom:2px}
+/* numbers */
+.nums{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0}
+.nrow{display:grid;grid-template-columns:repeat(4,1fr)}
+.nc{padding:54px 30px;text-align:center;border-right:1px solid var(--line)}
+.nc:last-child{border-right:0}
+.nc b{font-family:Fraunces;font-size:clamp(34px,4.5vw,56px);font-weight:400;display:block;letter-spacing:-.02em}
+.nc span{font-size:13px;color:var(--soft);letter-spacing:.08em;margin-top:10px;display:block;text-transform:uppercase}
+section{padding:130px 0}
+.lab{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+.big{font-size:clamp(30px,4.4vw,56px);font-weight:400;letter-spacing:-.02em;max-width:18ch}
+.lead{font-size:19px;color:var(--mut);line-height:1.8;font-weight:300;max-width:60ch}
+/* intro split */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro .tx p{font-size:16.5px;color:var(--mut);line-height:1.9;margin-top:22px;font-weight:300}
+.intro .im img{width:100%;height:600px;object-fit:cover;filter:grayscale(.1)}
+/* products minimal */
+.plist{border-top:1px solid var(--line)}
+.prow{display:grid;grid-template-columns:70px 1fr 300px 150px;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line);transition:.4s;cursor:pointer}
+.prow:hover{padding-left:16px;background:linear-gradient(90deg,var(--bg),transparent)}
+.prow .idx{font-family:Fraunces;font-size:18px;color:var(--soft)}
+.prow h3{font-size:clamp(22px,2.6vw,32px);font-weight:400}
+.prow .ds{font-size:14.5px;color:var(--mut);line-height:1.6;font-weight:300}
+.prow .im{width:150px;height:100px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.prow .im img{max-height:100%;width:auto;object-fit:contain;transition:.5s}.prow:hover .im img{transform:scale(1.08)}
+.prow .go{justify-self:end;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s}
+.prow:hover .go{background:var(--ink);border-color:var(--ink)}.prow:hover .go svg{stroke:#fff}
+.prow .go svg{width:18px;height:18px;stroke:var(--ink);transition:.3s}
+@media(max-width:860px){.prow{grid-template-columns:40px 1fr 60px;gap:16px}.prow .ds,.prow .im{display:none}}
+/* solutions */
+.sol{background:var(--bg)}
+.scards{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:10px}
+.scard{background:#fff;padding:52px 44px;transition:.4s}
+.scard:hover{background:var(--bg)}
+.scard .n{font-family:Fraunces;font-size:15px;color:var(--accent)}
+.scard h3{font-size:26px;font-weight:400;margin:18px 0 14px}
+.scard p{font-size:15px;color:var(--mut);line-height:1.75;font-weight:300}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;grid-auto-rows:200px}
+.gi{overflow:hidden;position:relative}.gi img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:.7s}.gi:hover img{filter:grayscale(0);transform:scale(1.05)}
+.g1{grid-column:span 7;grid-row:span 2}.g2{grid-column:span 5}.g3{grid-column:span 5}.g4{grid-column:span 4}.g5{grid-column:span 4}.g6{grid-column:span 4}
+@media(max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}.g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 1;grid-row:span 1}}
+/* services */
+.srv{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 44px}
+.si{border-top:1px solid var(--ink);padding-top:24px}
+.si h3{font-size:22px;font-weight:400;margin-bottom:12px}
+.si p{font-size:15px;color:var(--mut);line-height:1.7;font-weight:300}
+/* cta band */
+.band{text-align:center}
+.band h2{font-size:clamp(34px,5vw,68px);font-weight:400;letter-spacing:-.025em;margin-bottom:34px}
+.band h2 em{font-style:italic;color:var(--accent)}
+/* contact */
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.cwrap h2{font-size:clamp(30px,4vw,52px);font-weight:400;margin-bottom:30px}
+.cl{padding:22px 0;border-bottom:1px solid var(--line)}
+.cl small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:8px}
+.cl b{font-family:Fraunces;font-size:19px;font-weight:400}
+.fld{margin-bottom:24px}
+.fld label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:10px}
+.fld input,.fld select,.fld textarea{width:100%;border:0;border-bottom:1px solid var(--ink);padding:10px 0;font:inherit;font-size:16px;background:none;transition:.3s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--accent)}
+.sbtn{background:var(--ink);color:#fff;border:0;border-radius:40px;padding:16px 36px;font-size:15px;cursor:pointer;font-family:inherit;transition:.3s;margin-top:10px}.sbtn:hover{background:var(--accent)}
+footer{border-top:1px solid var(--line);padding:70px 0 34px}
+.frow{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:50px}
+.fbrand{font-family:Fraunces;font-size:24px;max-width:30ch}.fbrand img{height:42px;margin-bottom:18px}.fbrand p{font-size:14px;color:var(--mut);font-weight:300;line-height:1.7;margin-top:14px;font-family:Inter}
+.fnav{display:flex;gap:60px}.fnav h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-bottom:16px;font-family:Inter;font-weight:500}
+.fnav a{display:block;padding:6px 0;font-size:14.5px;color:#50585f;font-weight:300}.fnav a:hover{color:var(--ink)}
+.fbot{display:flex;justify-content:space-between;padding-top:26px;border-top:1px solid var(--line);font-size:13px;color:var(--soft);flex-wrap:wrap;gap:10px}
+@media(max-width:940px){.hero .grid,.intro,.cwrap{grid-template-columns:1fr;gap:46px}.scards{grid-template-columns:1fr}.srv{grid-template-columns:1fr}.nrow{grid-template-columns:1fr 1fr}.nc:nth-child(2){border-right:0}.hero .im img,.intro .im img{height:420px}section{padding:84px 0}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap"><nav>
+<a class="brand" href="#top"><img src="../img/logo.webp" alt="">Amimer Energie</a>
+<div class="menu"><a href="#about">Maison</a><a href="#produits">Produits</a><a href="#solutions">Solutions</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+<button class="nbtn" data-interest>Demander un devis</button>
+<button class="burger" id="bg"><i></i><i></i><i></i></button>
+</nav></div></header>
+<nav class="mob" id="mob"><button class="mclose" id="mc">×</button><a href="#about">Maison</a><a href="#produits">Produits</a><a href="#solutions">Solutions</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+
+<main id="top">
+<section class="hero"><div class="wrap"><div class="grid">
+<div>
+<div class="mark rv">Énergie · Algérie · depuis 1989</div>
+<h1 class="rv d1">L'énergie,<br>dans sa forme<br>la plus <em>juste</em>.</h1>
+<p class="sub rv d2">Groupes électrogènes, centrales clés en main, compresseurs et solaire. Une ingénierie industrielle précise, pensée pour durer.</p>
+<div class="hrow rv d3"><button class="hbtn" data-interest>Demander un devis</button><a class="lnk" href="#produits">Voir les produits</a></div>
+</div>
+<div class="im rv d2"><img src="../img/ge-blanc-salon.webp" alt="Groupe électrogène"><div class="cap"><b>Gamme Hoggar</b>Diesel · Gaz · Hybride</div></div>
+</div></div></section>
+
+<div class="nums"><div class="wrap"><div class="nrow">
+<div class="nc rv"><b data-count="35">0</b><span>Ans d'expertise</span></div>
+<div class="nc rv d1"><b data-count="9">0</b><span>Implantations</span></div>
+<div class="nc rv d2"><b data-count="6">0</b><span>Gammes</span></div>
+<div class="nc rv d3"><b data-count="800">0</b><span>kVA max</span></div>
+</div></div></div>
+
+<section id="about"><div class="wrap intro">
+<div class="tx rv"><div class="lab">La maison</div><h2 class="big">Un savoir-faire né à Seddouk, devenu référence nationale.</h2>
+<p>Depuis 1989, Amimer Energie conçoit, fabrique et entretient des équipements énergétiques — du groupe électrogène à la centrale électrique en EPC.</p>
+<p>Une entreprise algérienne qui a fait de l'énergie, cette denrée indispensable au développement du pays, le cœur de son métier. Fabrication locale, certification ISO 9001:2015, et un réseau de service partout sur le territoire.</p></div>
+<div class="im rv d1"><img src="../img/ge-rouge-studio.webp" alt="Groupe électrogène Amimer"></div>
+</div></section>
+
+<section id="produits"><div class="wrap">
+<div class="lab rv">Les produits</div><h2 class="big rv d1" style="margin-bottom:60px">Une gamme, choisie avec soin.</h2>
+<div class="plist">
+<div class="prow rv" data-interest><div class="idx">01</div><div><h3>Groupes électrogènes</h3></div><div class="ds">Gammes Tassili &amp; Hoggar — diesel, gaz, hybride, jusqu'à 800 kVA.</div><div class="im"><img src="../img/p/ge-tassili.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+<div class="prow rv" data-interest><div class="idx">02</div><div><h3>Compresseurs d'air</h3></div><div class="ds">À vis et mobiles, toutes pressions, pour l'industrie exigeante.</div><div class="im"><img src="../img/p/comp-vis.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+<div class="prow rv" data-interest><div class="idx">03</div><div><h3>Kits solaires</h3></div><div class="ds">De 5 à 11 kWc et sur-mesure — l'énergie propre et économique.</div><div class="im"><img src="../img/p/kit-solaire.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+<div class="prow rv" data-interest><div class="idx">04</div><div><h3>Conteneurs techniques</h3></div><div class="ds">20 &amp; 40 pieds, bases de vie, postes et shelters personnalisables.</div><div class="im"><img src="../img/p/conteneur-40.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+<div class="prow rv" data-interest><div class="idx">05</div><div><h3>Traitement d'air</h3></div><div class="ds">Sécheurs, filtres et compresseurs premium pour un air fiable.</div><div class="im"><img src="../img/p/secheur.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+</div>
+</div></section>
+
+<section id="solutions" class="sol"><div class="wrap">
+<div class="lab rv">Les solutions</div><h2 class="big rv d1" style="margin-bottom:10px">Des centrales électriques, clés en main.</h2>
+<div class="scards">
+<div class="scard rv"><div class="n">01</div><h3>Solutions Diesel</h3><p>Centrales de production dimensionnées pour les sites isolés et industriels, de l'étude à la mise en service.</p></div>
+<div class="scard rv d1"><div class="n">02</div><h3>Solutions Gaz</h3><p>Une production d'électricité performante et plus propre, pour une énergie continue et maîtrisée.</p></div>
+<div class="scard rv"><div class="n">03</div><h3>Énergies renouvelables</h3><p>Centrales solaires et solutions hybrides pour réduire durablement votre dépendance énergétique.</p></div>
+<div class="scard rv d1"><div class="n">04</div><h3>Distribution MT</h3><p>Postes électriques moyenne tension pour le raccordement et la distribution de vos installations.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="lab rv">Sur le terrain</div><h2 class="big rv d1" style="margin-bottom:46px">Des projets qui comptent.</h2>
+<div class="gal">
+<div class="gi g1 rv"><img src="../img/champ-solaire.webp" alt="Champ solaire"></div>
+<div class="gi g2 rv d1"><img src="../img/showroom.webp" alt="Showroom"></div>
+<div class="gi g3 rv"><img src="../img/ge-rouge-salon.webp" alt="Groupe électrogène"></div>
+<div class="gi g4 rv d1"><img src="../img/sipsa.webp" alt="SIPSA"></div>
+<div class="gi g5 rv d2"><img src="../img/conteneurs-sureleves.webp" alt="Conteneurs"></div>
+<div class="gi g6 rv d3"><img src="../img/signature-mali.webp" alt="Contrat international"></div>
+</div>
+</div></section>
+
+<section id="services" class="sol"><div class="wrap">
+<div class="lab rv">Les services</div><h2 class="big rv d1" style="margin-bottom:60px">Un accompagnement, de bout en bout.</h2>
+<div class="srv">
+<div class="si rv"><h3>Engineering</h3><p>Études, conception et dimensionnement de vos installations sur mesure.</p></div>
+<div class="si rv d1"><h3>Maintenance</h3><p>Un réseau d'experts partout en Algérie, avec un outillage de pointe.</p></div>
+<div class="si rv d2"><h3>Location</h3><p>L'énergie de vos projets ponctuels et urgents, sans mobiliser vos ressources.</p></div>
+<div class="si rv"><h3>Formations</h3><p>Des programmes pour maîtriser l'exploitation de vos équipements.</p></div>
+<div class="si rv d1"><h3>Accompagnement</h3><p>Un support technique de proximité tout au long de la vie de l'installation.</p></div>
+<div class="si rv d2"><h3>Mobilité électrique</h3><p>Bornes de recharge pour véhicules électriques, pour la transition.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<h2 class="rv">Donnons de l'énergie<br>à votre <em>projet</em>.</h2>
+<button class="hbtn rv d1" data-interest>Demander un devis</button>
+</div></section>
+
+<section id="contact"><div class="wrap cwrap">
+<div class="rv">
+<div class="lab">Contact</div><h2>Écrivons<br>la suite.</h2>
+<div class="cl"><small>Siège</small><b>Lotissement M. Saïdoune, villa 124, Kouba, Alger</b></div>
+<div class="cl"><small>Usine</small><b>Seddouk, Béjaïa</b></div>
+<div class="cl"><small>Téléphone</small><b>+213 28 97 77 79</b></div>
+<div class="cl"><small>Email</small><b>contact@amimer.com</b></div>
+</div>
+<form class="rv d1" data-demo>
+<div class="fld"><label>Nom</label><input required placeholder="Votre nom"></div>
+<div class="fld"><label>Email</label><input type="email" required placeholder="vous@entreprise.com"></div>
+<div class="fld"><label>Téléphone</label><input required placeholder="0x xx xx xx xx"></div>
+<div class="fld"><label>Catégorie</label><select><option>Groupes électrogènes</option><option>Compresseurs d'air</option><option>Kits solaires</option><option>Conteneurs</option><option>Centrale / EPC</option><option>Maintenance / Location</option></select></div>
+<div class="fld"><label>Votre besoin</label><textarea rows="3" placeholder="Décrivez votre projet…"></textarea></div>
+<button class="sbtn" type="submit">Envoyer</button>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="frow">
+<div class="fbrand"><img src="../img/logo.webp" alt="">Amimer Energie<p>Votre source d'énergie depuis 1989.</p></div>
+<div class="fnav">
+<div><h4>Produits</h4><a data-interest>Groupes électrogènes</a><a data-interest>Compresseurs</a><a data-interest>Solaire</a><a data-interest>Conteneurs</a></div>
+<div><h4>Maison</h4><a href="#about">À propos</a><a href="#solutions">Solutions</a><a href="#services">Services</a></div>
+<div><h4>Contact</h4><a>Kouba, Alger</a><a>+213 28 97 77 79</a><a>contact@amimer.com</a></div>
+</div>
+</div>
+<div class="fbot"><div>© 2026 Amimer Energie — ISO 9001:2015</div><div>Maquette : Webminds</div></div>
+</div></footer>
+
+<script>
+(function(){var h=document.getElementById('hd');function u(){h.classList.toggle('sc',scrollY>20)}u();addEventListener('scroll',u,{passive:true});
+var b=document.getElementById('bg'),m=document.getElementById('mob'),c=document.getElementById('mc');
+function t(){m.classList.toggle('open')}b.onclick=t;c.onclick=t;m.querySelectorAll('a').forEach(function(a){a.onclick=t});})();
+</script>
+<script src="../common.js"></script>
+</body>
+</html>
