@@ -150,7 +150,27 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
 <div class="im rv d1"><img src="../img/ge-rouge-studio.webp" alt="Groupe électrogène Amimer"></div>
 </div></section>
 
-<section id="produits"><div class="wrap">
+<section id="video" class="amv"><style>
+.amv{background:#0a1f44;padding:96px 0 104px;color:#f4f7fc}
+.amv .aw{max-width:1200px;margin:0 auto;padding:0 32px}
+.amv .ae{font:700 13px/1 inherit;letter-spacing:.14em;color:#f2a516;display:flex;align-items:center;gap:12px;text-transform:uppercase}
+.amv .ae:before{content:"";width:40px;height:2px;background:#f2a516}
+.amv .ah{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:36px}
+.amv h2{font-weight:800;font-size:clamp(30px,4vw,50px);line-height:1.08;margin:16px 0 0;color:#fff;max-width:720px}
+.amv h2 span{color:#f2a516}
+.amv p{color:#a8b6ce;font-size:17px;line-height:1.6;max-width:420px;margin:0}
+.amv .af{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)}
+.amv video{display:block;width:100%;height:100%;object-fit:cover}
+.amv .ap{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(6,16,40,0),rgba(6,16,40,.5));display:flex;align-items:center;justify-content:center;gap:16px;color:#fff;font:700 16px/1 inherit;transition:opacity .3s}
+.amv .ap i{width:90px;height:90px;border-radius:50%;background:#f2a516;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(242,165,22,.22);transition:transform .25s}
+.amv .ap:hover i{transform:scale(1.07)}
+.amv .ap svg{width:32px;height:32px;margin-left:5px}
+.amv .af.on .ap{opacity:0;pointer-events:none}
+@media(max-width:700px){.amv{padding:64px 0}.amv .ap i{width:64px;height:64px}.amv .ap em{display:none}}
+</style><div class="aw"><div class="ah"><div><div class="ae">AMIMER ENERGIE en vidéo</div><h2>L'énergie qui fait <span>avancer l'Algérie.</span></h2></div><p>Groupes électrogènes, compresseurs, solaire, conteneurs et centrales clés en main : découvrez nos métiers en 45 secondes.</p></div>
+<div class="af" id="amF"><video id="amV" preload="metadata" playsinline poster="../img/amimer-poster.jpg"><source src="../img/amimer-presentation.mp4" type="video/mp4"></video>
+<button class="ap" id="amP" aria-label="Lire la vidéo"><i><svg viewBox="0 0 24 24" fill="#0a1f44"><path d="M7 4.5v15l13-7.5z"/></svg></i><em style="font-style:normal">Voir la vidéo · 48 s</em></button></div></div>
+<script>(function(){var f=document.getElementById('amF'),v=document.getElementById('amV');document.getElementById('amP').addEventListener('click',function(){v.controls=true;f.classList.add('on');v.play();});v.addEventListener('ended',function(){f.classList.remove('on');v.controls=false;v.currentTime=0;});})();</script></section><section id="produits"><div class="wrap">
 <div class="lab rv">Les produits</div><h2 class="big rv d1" style="margin-bottom:60px">Une gamme, choisie avec soin.</h2>
 <div class="plist">
 <div class="prow rv" data-interest><div class="idx">01</div><div><h3>Groupes électrogènes</h3></div><div class="ds">Gammes Tassili &amp; Hoggar — diesel, gaz, hybride, jusqu'à 800 kVA.</div><div class="im"><img src="../img/p/ge-tassili.jpg" alt=""></div><div class="go"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
