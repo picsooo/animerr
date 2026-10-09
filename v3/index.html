@@ -327,6 +327,38 @@ footer{background:var(--slate);color:#9fb0c6;padding:68px 0 26px}
 var b=document.getElementById('bg'),m=document.getElementById('mob'),c=document.getElementById('mc');
 function t(){m.classList.toggle('open')}b.onclick=t;c.onclick=t;m.querySelectorAll('a').forEach(function(a){a.onclick=t});})();
 </script>
+<!-- Webminds · pop-up avant/après -->
+<div id="wmBA" class="wmba" aria-hidden="true"><style>
+.wmba{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;background:rgba(5,14,32,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;padding:20px}
+.wmba.on{opacity:1;visibility:visible}
+.wmba .bx{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;transform:translateY(24px) scale(.96);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.wmba.on .bx{transform:none}
+.wmba .tl{font:700 13px/1 Inter,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#f2a516}
+.wmba .vf{position:relative;height:min(78vh,820px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#0a1f44;box-shadow:0 40px 100px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.1)}
+.wmba video{display:block;width:100%;height:100%;object-fit:cover}
+.wmba .x{position:absolute;top:14px;right:-16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#0a1f44;font:700 24px/44px system-ui;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.35);z-index:2}
+.wmba .snd{position:absolute;left:12px;bottom:12px;border:0;border-radius:30px;background:rgba(10,31,68,.85);color:#fff;font:600 13px Inter,system-ui,sans-serif;padding:9px 14px;cursor:pointer}
+.wmba .by{font:500 12.5px Inter,system-ui,sans-serif;color:#a8b6ce}
+.wmba-fab{position:fixed;left:18px;bottom:18px;z-index:2147482999;display:none;align-items:center;gap:10px;border:0;border-radius:40px;background:#f2a516;color:#0a1f44;font:700 14px Inter,system-ui,sans-serif;padding:12px 18px 12px 12px;cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+.wmba-fab i{width:28px;height:28px;border-radius:50%;background:#0a1f44;display:flex;align-items:center;justify-content:center}
+.wmba-fab.show{display:flex}
+@media(max-width:600px){.wmba .vf{height:min(74vh,700px)}.wmba-fab{bottom:118px;left:14px}}
+</style>
+<div class="bx"><div class="tl">Votre site · avant / après</div>
+<button class="x" id="wmBAx" aria-label="Fermer">×</button><div class="vf">
+<video id="wmBAv" playsinline muted preload="metadata" poster="../img/avant-apres.jpg"><source src="../img/avant-apres.mp4" type="video/mp4"></video>
+<button class="snd" id="wmBAs">🔊 Activer le son</button></div>
+<div class="by">Proposé par Webminds</div></div></div>
+<button class="wmba-fab" id="wmBAf"><i><svg width="12" height="12" viewBox="0 0 24 24" fill="#f2a516"><path d="M7 4.5v15l13-7.5z"/></svg></i>Avant / Après</button>
+<script>(function(){var o=document.getElementById('wmBA'),v=document.getElementById('wmBAv'),s=document.getElementById('wmBAs'),f=document.getElementById('wmBAf');
+function open(){o.classList.add('on');o.setAttribute('aria-hidden','false');f.classList.remove('show');try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}}
+function close(){o.classList.remove('on');o.setAttribute('aria-hidden','true');v.pause();f.classList.add('show');}
+document.getElementById('wmBAx').onclick=close;o.addEventListener('click',function(e){if(e.target===o)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&o.classList.contains('on'))close();});
+s.onclick=function(){v.muted=!v.muted;s.textContent=v.muted?'🔊 Activer le son':'🔇 Couper le son';if(v.paused)v.play();};
+v.addEventListener('ended',function(){setTimeout(close,600);});f.onclick=open;
+var seen=false;try{seen=sessionStorage.getItem('wmBAseen')==='1';}catch(e){}
+if(seen){f.classList.add('show');}else{setTimeout(function(){open();try{sessionStorage.setItem('wmBAseen','1');}catch(e){}},1500);}})();</script>
 <script src="../common.js"></script>
 </body>
 </html>
